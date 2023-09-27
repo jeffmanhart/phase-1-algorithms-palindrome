@@ -8,12 +8,11 @@ function isPalindrome(word) {
     const forwardLetter = wordArray[i];
     const backwardLetter = wordArray[count];
     count--
-    if(forwardLetter===backwardLetter){
-      return true
-    }else{
+    if(forwardLetter!==backwardLetter){
       return false
     }
   }
+  return true
     
 }
 
@@ -23,7 +22,10 @@ function isPalindrome(word) {
   take in string
   splitletters into array
   loop through the last letter in the array to compare to the front letters
-  return true or false
+    if letter forward and backwards are the same
+      return true 
+      else 
+      return false
 */
 
 /*
@@ -58,6 +60,8 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("foobar"));
+  console.log("Expecting: false");
+  console.log("=>", isPalindrome("floof"));
 }
 
 module.exports = isPalindrome;
